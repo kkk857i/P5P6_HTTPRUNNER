@@ -1,0 +1,18 @@
+#测试用例分层实战示列
+- config:
+    name: "获取token -- 修改标签"
+    export:
+      - token
+- test:
+    name: "执行获取token接口"
+    api: api/begin_dev/get_access_token_api.yml
+    extract:
+      - token: content.access_token
+- test:
+    name: "执行修改标签接口"
+    api: api/user_manager/user_tag_manager/updata_tag_info_api.yml
+    extract:
+      - errcode: content.errcode
+    validate:
+      - eq: [$errcode,0]
+

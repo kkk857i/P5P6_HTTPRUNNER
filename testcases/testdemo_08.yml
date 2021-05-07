@@ -1,0 +1,28 @@
+#hrun 关联实现
+- config:
+    name: '获取token--修改标签'
+    base_url: "https://api.weixin.qq.com"
+
+- test:
+    name: "获取token API"
+    request:
+      method: "GET"
+      url: "/cgi-bin/token"
+      params:
+        grant_type: "client_credential"
+        appid: "wx15938bc8b042cee0"
+        secret: "f01c3e1836d6b40fb24db5dbc0142253"
+    extract:
+      - token: content.access_token
+    validate:
+      - eq: ["status_code",200]
+- test:
+    name: "修改标签 API"
+    request:
+      method: "POST"
+      url: "/cgi-bin/tags/update"
+      params:
+        access_token: $token
+      json: { "tag" : { "id" : 123,"name" : "hello_kk"} }
+    validate:
+      - eq: ["status_code",200]

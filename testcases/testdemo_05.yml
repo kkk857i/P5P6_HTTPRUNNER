@@ -1,0 +1,24 @@
+# 解析响应信息到变量
+- config:
+    name: '验证能否打开newdream主页'
+    base_url: 'http://www.hnxmxit.com/'
+    export:
+      - code
+      - info
+      - time
+#      - len
+      - title
+- test:
+    name: 'exec hnxmxit api'
+    request:
+      url: '/'
+      method: 'GET'
+    extract:
+      - code: "status_code"  # 200
+      - info: "reason"  # OK
+      - time: elapsed.microseconds  # 请求响应时间
+#      - len: headers.Server # 获取响应头 响应大小
+      - title: <title>(.+?)</title>  # 调用正则表达式方式去取
+    validate:
+      - eq: ["status_code",200]
+#      - eq: [$len,"Apache"]

@@ -1,0 +1,19 @@
+# hook机制
+- config:
+    name: "访问首页"
+    base_url: ${ENV(HOSTS)}
+    setup_hooks:    #测试用例hooks
+      - ${setup_test_case(访问首页)}
+    teardown_hooks:
+      - ${teardown_test_case(访问首页)}
+- test:
+    name: "exec hnxmxit api"
+    setup_hooks:    #测试步骤hooks
+      - ${setup_test_step()}
+    teardown_hooks:
+      - ${teardown_test_step()}
+    request:
+      url: "/" #请求地址
+      method: "GET"
+    validate:
+      - eq: ["status_code",200]

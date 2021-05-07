@@ -1,0 +1,9 @@
+#测试用例集示列 ==>语法二
+config:
+  name: "开始开发模块用例"
+
+testcases:
+  百度搜索用例:
+    testcase: testcases/senior/testdemo_02.yml
+  获取token修改标签查询修改的标签:
+    testcase: testcases/senior/testdemo_06.yml

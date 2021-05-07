@@ -1,0 +1,13 @@
+- config:
+    name: "获取token --删除标签"
+
+- test:
+    name: "获取token"
+    api:
+      method: "GET"
+
+- test:
+    name: "删除标签"
+    api:
+    extract:
+      - errcode: content

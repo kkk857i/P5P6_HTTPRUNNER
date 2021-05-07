@@ -1,0 +1,6 @@
+config:
+  name: "用户标签管理用例"
+
+testcases:
+  - name: "删除标签用例"
+    testcase: testcases/work0411/test

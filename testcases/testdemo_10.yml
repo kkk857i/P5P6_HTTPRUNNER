@@ -1,0 +1,14 @@
+#断言写法
+#模拟get请求
+- config:
+    name: "验证能否打开nwedream主页"
+    base_url: "http://www.hnxmxit.com/"
+#测试步骤
+- test:
+    name: "exec hnxmxit api"  #测试步骤名称
+    request:
+      url: "/" #请求地址
+      method: "GET"
+    validate:
+      - eq: ["status_code",200] #验证响应状态码是否为200 eq表示断言语句
+      - equals: ["status_code",200]

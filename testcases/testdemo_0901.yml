@@ -1,0 +1,19 @@
+#利用export跨文件传梯token值
+- config:
+    name: "验证获取token接口"
+    base_url: "https://api.weixin.qq.com"
+    export:
+      - token
+- test:
+    name: "exec get_access_token"
+    request:
+      method: "GET"
+      url: "/cgi-bin/token"
+      params:
+        grant_type: "client_credential"
+        appid: "wx15938bc8b042cee0"
+        secret: "f01c3e1836d6b40fb24db5dbc0142253"
+    extract:
+      - token: content.access_token
+    validate:
+      - eq: ["status_code",200]

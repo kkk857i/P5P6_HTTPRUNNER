@@ -1,0 +1,9 @@
+name: "delete user tag api"
+base_url: ${ENV(URL)}
+request:
+  method: "GET"
+  url: "/cgi-bin/tags/delete"
+  params:
+    access_token:$token
+validate:
+  - eq: ["status_code",200]

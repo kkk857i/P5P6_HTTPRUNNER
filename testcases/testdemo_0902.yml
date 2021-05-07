@@ -1,0 +1,21 @@
+#利用export跨文件传梯token值
+- config:
+    name: "修改标签 API"
+    base_url: "https://api.weixin.qq.com"
+
+- test:
+    name: "验证获取token API"
+    testcase: testcases/testdemo_0901.yml
+    extract:
+      - token
+- test:
+    name: "修改标签 API"
+    request:
+      method: "POST"
+      url: "/cgi-bin/tags/update"
+      params:
+        access_token: $token
+      json: { "tag" : { "id" : 123,"name" : "hello_kikt"} }
+    validate:
+      - eq: ["status_code",200]
+

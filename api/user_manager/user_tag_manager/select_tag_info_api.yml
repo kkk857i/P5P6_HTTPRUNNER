@@ -1,0 +1,9 @@
+name: "select_tag_info_api"
+base_url: ${ENV(URL)}
+request:
+  method: "GET"
+  url: "/cgi-bin/tags/get"
+  params:
+    access_token: $token
+validate:
+  - eq: ["status_code",200]

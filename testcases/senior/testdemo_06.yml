@@ -1,0 +1,16 @@
+#测试用例分层实战示列2
+- config:
+    name: "获取token -- 修改标签--查询修改的标签"
+- test:
+    name: "获取token--修改标签"
+    testcase: testcases/senior/testdemo_05.yml
+    extract:
+      - token
+- test:
+    name: "查询修改的标签"
+    api: api/user_manager/user_tag_manager/select_tag_info_api.yml
+    extract:
+      - tag_name: content.tags.19.name #标签值
+    validate:
+      - eq: [$tag_name,"hhp5p6"]
+

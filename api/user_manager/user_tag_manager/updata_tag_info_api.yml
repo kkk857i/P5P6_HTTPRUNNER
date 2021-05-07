@@ -1,0 +1,10 @@
+name: "update_tag_info_api"
+base_url: ${ENV(URL)}
+request:
+  method: "POST"
+  url: "/cgi-bin/tags/update"
+  params:
+    access_token: $token
+  json: {"tag" : {"id":121 ,"name": "hhp5p6"} }
+validate:
+  - eq: ["status_code",200]

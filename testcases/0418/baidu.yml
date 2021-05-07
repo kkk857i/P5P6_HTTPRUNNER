@@ -1,0 +1,534 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /
+    request:
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        url: https://www.baidu.com/
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html;charset=utf-8
+-   name: /cd37ed75a9387c5b.js
+    request:
+        headers:
+            If-Modified-Since: Thu, 15 Apr 2021 19:09:48 GMT
+            Sec-Fetch-Dest: script
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        url: https://hectorstatic.baidu.com/cd37ed75a9387c5b.js
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/javascript; charset=utf-8
+-   name: /feed/5ab5c9ea15ce36d3706e4b26611d668fe850b1b1.jpeg
+    request:
+        headers:
+            sec-fetch-dest: image
+            sec-fetch-mode: no-cors
+            sec-fetch-site: same-site
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            token: 811d023e59426c50162079854296ed97
+        url: https://pics4.baidu.com/feed/5ab5c9ea15ce36d3706e4b26611d668fe850b1b1.jpeg
+    validate:
+    -   eq:
+        - status_code
+        - 200
+-   name: /feed/c8177f3e6709c93d8c46977c5c58abd4d0005477.jpeg
+    request:
+        headers:
+            sec-fetch-dest: image
+            sec-fetch-mode: no-cors
+            sec-fetch-site: same-site
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            token: 401379a803e14437a72d270af40ae6be
+        url: https://pics4.baidu.com/feed/c8177f3e6709c93d8c46977c5c58abd4d0005477.jpeg
+    validate:
+    -   eq:
+        - status_code
+        - 200
+-   name: /5aV1bjqh_Q23odCf/static/superman/img/weather/icons/a2.png
+    request:
+        headers:
+            sec-fetch-dest: image
+            sec-fetch-mode: no-cors
+            sec-fetch-site: cross-site
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        url: https://dss2.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/weather/icons/a2.png
+    validate:
+    -   eq:
+        - status_code
+        - 200
+-   name: /feed/86d6277f9e2f07081a51c9ca5441eb91a801f216.jpeg
+    request:
+        headers:
+            sec-fetch-dest: image
+            sec-fetch-mode: no-cors
+            sec-fetch-site: same-site
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            token: 2fc5658d0dea23ee17f44200b203a82c
+        url: https://pics3.baidu.com/feed/86d6277f9e2f07081a51c9ca5441eb91a801f216.jpeg
+    validate:
+    -   eq:
+        - status_code
+        - 200
+-   name: /feed/c2cec3fdfc039245a023915638f1f7ca7c1e2546.jpeg
+    request:
+        headers:
+            sec-fetch-dest: image
+            sec-fetch-mode: no-cors
+            sec-fetch-site: same-site
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            token: 29a8d72271cf657bee1062557e5653c2
+        url: https://pics6.baidu.com/feed/c2cec3fdfc039245a023915638f1f7ca7c1e2546.jpeg
+    validate:
+    -   eq:
+        - status_code
+        - 200
+-   name: /-L-Xsjip0QIZ8tyhnq/v.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            _r: '0.16062572484432147'
+            curcard: '2'
+            curcardtab: ''
+            from_login: ''
+            from_reg: ''
+            glogid: '3959390624'
+            isLogin: '1'
+            logactid: '1234567890'
+            mod: superman:lib
+            opType: showpv
+            pid: '315'
+            portrait: 330fbbaccfe8bbfa6bb2e7
+            qid: '0xa98b85ed001796b7'
+            query: ''
+            showTab: '10000'
+            sid: '33816_31253_33693_33849_33675_26350_33810'
+            submod: index
+            super_frm: ''
+            superver: supernewplus
+            terminal: PC
+            type: '2011'
+            utype: '0'
+            version: PCHome
+        url: https://sp1.baidu.com/-L-Xsjip0QIZ8tyhnq/v.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif
+-   name: /sugrec
+    request:
+        headers:
+            Sec-Fetch-Dest: empty
+            Sec-Fetch-Mode: cors
+            Sec-Fetch-Site: same-origin
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            _t: '1618726869267'
+            csor: '0'
+            from: pc_web
+            hisdata: ''
+            json: '1'
+            prod: pc_his
+            req: '2'
+            sid: '33816_31253_33693_33849_33675_26350_33810'
+        url: https://www.baidu.com/sugrec
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/plain; charset=UTF-8
+-   name: /content-search.xml
+    request:
+        headers:
+            Sec-Fetch-Dest: empty
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-origin
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        url: https://www.baidu.com/content-search.xml
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/xml
+-   name: /home/hit/v.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-origin
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            _r: '0.6633345386461569'
+            curcard: '2'
+            curcardtab: ''
+            from_login: ''
+            from_reg: ''
+            glogid: '3959390624'
+            isLogin: '1'
+            logactid: '0200100000'
+            m: mantpl:news_newsShow
+            mod: mantpl:news
+            pagenum: '0'
+            pid: '315'
+            portrait: 330fbbaccfe8bbfa6bb2e7
+            qid: '0xa98b85ed001796b7'
+            query: ''
+            showType: hotword
+            sid: '33816_31253_33693_33849_33675_26350_33810'
+            submod: index
+            super_frm: ''
+            superver: supernewplus
+            terminal: PC
+            type: '2011'
+            utype: '0'
+            version: PCHome
+            words: '["1中美发表应对气候危机联合声明","2丈夫葬礼上 94岁英女王车内抹泪热","3五一国内出游有望达2亿人次","475岁退休干警诽谤领导获刑12年","5高考倒计时50天荐","6现实版“福贵大爷”已结婚生女","7中国超2亿人单身","8林志颖称放金铲子有助生子被骂迷信新","9香港老戏骨王钟因病去世","10大巴被限高杆削顶致1死6伤"]'
+        url: https://www.baidu.com/home/hit/v.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif
+-   name: /-L-Ysjip0QIZ8tyhnq/v.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            _r: '0.6633345386461569'
+            curcard: '2'
+            curcardtab: ''
+            from_login: ''
+            from_reg: ''
+            glogid: '3959390624'
+            isLogin: '1'
+            logactid: '0200100000'
+            m: mantpl:news_newsShow
+            mod: mantpl:news
+            pagenum: '0'
+            pid: '315'
+            portrait: 330fbbaccfe8bbfa6bb2e7
+            qid: '0xa98b85ed001796b7'
+            query: ''
+            showType: hotword
+            sid: '33816_31253_33693_33849_33675_26350_33810'
+            submod: index
+            super_frm: ''
+            superver: supernewplus
+            terminal: PC
+            type: '2011'
+            utype: '0'
+            version: PCHome
+            words: '["1中美发表应对气候危机联合声明","2丈夫葬礼上 94岁英女王车内抹泪热","3五一国内出游有望达2亿人次","475岁退休干警诽谤领导获刑12年","5高考倒计时50天荐","6现实版“福贵大爷”已结婚生女","7中国超2亿人单身","8林志颖称放金铲子有助生子被骂迷信新","9香港老戏骨王钟因病去世","10大巴被限高杆削顶致1死6伤"]'
+        url: https://sp2.baidu.com/-L-Ysjip0QIZ8tyhnq/v.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif
+-   name: /passApi/js/wrapper.js
+    request:
+        headers:
+            Sec-Fetch-Dest: script
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            _: '1618726869015'
+            cdnversion: '1618726869450'
+        url: https://passport.baidu.com/passApi/js/wrapper.js
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/x-javascript
+-   name: /home/xman/data/tipspluslist
+    request:
+        headers:
+            Sec-Fetch-Dest: empty
+            Sec-Fetch-Mode: cors
+            Sec-Fetch-Site: same-origin
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+            X-Requested-With: XMLHttpRequest
+        method: GET
+        params:
+            _req_seqid: '0xa98b85ed001796b7'
+            asyn: '1'
+            indextype: manht
+            sid: '33816_31253_33693_33849_33675_26350_33810'
+            t: '1618726869469'
+        url: https://www.baidu.com/home/xman/data/tipspluslist
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html;charset=utf-8
+-   name: /-L-Wsjip0QIZ8tyhnq/v.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            _r: '0.8248444709724405'
+            curcard: '2'
+            curcardtab: ''
+            from_login: ''
+            from_reg: ''
+            glogid: '3959390624'
+            isLogin: '1'
+            logactid: '1100000000'
+            m: mancard:skeleton_modShow
+            mod: mancard:skeleton
+            opType: refresh
+            pid: '315'
+            portrait: 330fbbaccfe8bbfa6bb2e7
+            qid: '0xa98b85ed001796b7'
+            query: ''
+            showTab: '2'
+            sid: '33816_31253_33693_33849_33675_26350_33810'
+            submod: presenter
+            super_frm: ''
+            superver: supernewplus
+            terminal: PC
+            type: '2011'
+            utype: '0'
+            version: PCHome
+        url: https://sp0.baidu.com/-L-Wsjip0QIZ8tyhnq/v.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif
+-   name: /-L-Xsjip0QIZ8tyhnq/v.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            _r: '0.09891536338271756'
+            curcard: '2'
+            curcardtab: ''
+            extra: '{"rec_src":[4400],"type":10,"score":87029.90625,"mark":1,"recall_type":10,"vertical_type":5,"mthid":"1601149438053974","predictor_result":"CAEZAIBDRHtR3EA=","q_ratio":103.49864062721,"recall_attention":[""],"img_num":0,"predictor_extmsg":"EjwZAAAAgItPhD8gBDEAAACAi0+EPzkAAAAgqJLDP6EBAAAAAAAA8D+oAQK1AQAAgD+1AQAAgD+1AQAAgD8iLxkAAADgobGdPyAEMQAAAADl054\/UQAAAADl054\/WQAAAADl054\/cQAAAOChsZ0\/","dnn_score_cp":0.0098153160189069,"th":-1,"gr_layout":"titleonly","session_id":"","refresh_index":"0","session_index":240,"position":0,"log_id":3959390624,"refresh_state":0,"refresh_type":1,"refresh_timestamp_ms":1618726868462,"news_attention":["\u5df4\u9ece\u534f\u5b9a","\u8054\u5408\u56fd","\u80fd\u6e90","\u6c14\u5019\u53d8\u5316","\u65f6\u653f\u5916\u4ea4","\u4e2d\u7f8e","\u4e2d\u7f8e\u5173\u7cfb"],"predictor_q_score":28997.926041484,"is_microvideo":false,"video_type":"","channel_id":1,"wifiinfo":"","gr_step_click":-1,"gr_step_related_click":0,"attentionnum":0,"video_attentionnum":1,"gr_news_sub_category_single":"\u8282\u80fd\u51cf\u6392","ext_multi_score":0,"predictor_result_array":[{"rec_src":4400,"predictorq":"CAEZAIBDRHtR3EA="}],"user_activity_v1":1.5637434631533e-28,"loc_city":"\u4e0a\u6d77","pass_through":"{\"cold_start\":1,\"user_activity\":3.6487347473576944e-29,\"user_activity_v1\":1.5637434631532972e-28,\"user_stay_time\":0.0,\"first_use_time\":0,\"_new_xm_usr_20210122\":false,\"user_long_all_ctr\":0.0,\"user_long_news_ctr\":0.0,\"user_long_video_ctr\":0.0,\"user_baipai_always_prefer_video\":0,\"user_long_prefer_resource\":-1,\"baipai_user_lastrefresh_clicked\":0}","crudely_stat":"|ri_0"},{"rec_src":[4400],"type":10,"score":34717.38671875,"mark":1,"recall_type":10,"vertical_type":0,"mthid":"1551968238585112","predictor_result":"CAEZAACDZgEZykA=","q_ratio":194.44795764506,"recall_attention":[""],"img_num":3,"predictor_extmsg":"EjwZAAAAAO94iT8gBDEAAAAA73iJPzkAAADAtGHUP6EBAAAAAAAA8D+oAQK1AQAAgD+1AQAAgD+1AQAAgD8iLxkAAADAil2LPyAEMQAAAICxyI4\/UQAAAICxyI4\/WQAAAICxyI4\/cQAAAMCKXYs\/","dnn_score_cp":0.017842867524403,"th":-1,"gr_layout":"image1","session_id":"","refresh_index":"0","session_index":240,"position":1,"log_id":3959390624,"refresh_state":0,"refresh_type":1,"refresh_timestamp_ms":1618726868462,"news_attention":["\u80ba\u708e","\u51a0\u72b6\u75c5\u6bd2","\u65b0\u578b\u80ba\u708e","\u65b0\u578b\u51a0\u72b6\u75c5\u6bd2","\u75ab\u60c5"],"predictor_q_score":13362.010940909,"is_microvideo":false,"video_type":"","channel_id":1,"wifiinfo":"","gr_step_click":-1,"gr_step_related_click":0,"attentionnum":0,"video_attentionnum":1,"gr_news_sub_category_single":"\u53f0\u6d77\u65f6\u4e8b","ext_multi_score":0,"predictor_result_array":[{"rec_src":4400,"predictorq":"CAEZAACDZgEZykA="}],"user_activity_v1":1.5637434631533e-28,"loc_city":"\u4e0a\u6d77","pass_through":"{\"cold_start\":1,\"user_activity\":3.6487347473576944e-29,\"user_activity_v1\":1.5637434631532972e-28,\"user_stay_time\":0.0,\"first_use_time\":0,\"_new_xm_usr_20210122\":false,\"user_long_all_ctr\":0.0,\"user_long_news_ctr\":0.0,\"user_long_video_ctr\":0.0,\"user_baipai_always_prefer_video\":0,\"user_long_prefer_resource\":-1,\"baipai_user_lastrefresh_clicked\":0}","crudely_stat":"|ri_0"},{"rec_src":[4205],"type":0,"score":56159.09375,"mark":0,"recall_type":7,"vertical_type":0,"mthid":"1564837137966671","predictor_result":"CAEZAADaAeNr60A5AADaAeNr60A=","q_ratio":1,"recall_attention":["supplement"],"img_num":6,"sample_name":"integration_news","predictor_extmsg":"EhQZAAAAgOLArD8gCTEAAACA4sCsPxoA","dnn_score_cp":0.056159093976021,"th":-1,"gr_layout":"image1","session_id":"","refresh_index":"0","session_index":240,"position":2,"log_id":3959390624,"refresh_state":0,"refresh_type":1,"refresh_timestamp_ms":1618726868462,"news_attention":["\u85cf\u5b9d\u9601","\u5927\u578b\u591a\u4eba\u5728\u7ebf\u89d2\u8272\u626e\u6f14\u6e38\u620f","\u89d2\u8272\u626e\u6f14\u6e38\u620f","\u68a6\u5e7b\u897f\u6e38","\u68a6\u5e7b\u897f\u6e38-->>\u68a6\u5e7b\u897f\u6e38\u6e38\u620f","\u68a6\u5e7b\u897f\u6e38\u6293\u9b3c\u5956\u52b1","\u7f51\u6613\u6e38\u620f","\u7f51\u6e38"],"predictor_q_score":56159.093976021,"is_microvideo":false,"video_type":"","channel_id":1,"wifiinfo":"","gr_step_click":-1,"gr_step_related_click":0,"attentionnum":0,"video_attentionnum":1,"gr_pred_score":0.042719372149756,"gr_dnn_score":0.056159093976021,"gr_calibration_q":0,"gr_pred_dur":0,"gr_news_sub_category_single":"\u7efc\u5408","ext_multi_score":0,"predictor_result_array":[{"rec_src":4205,"predictorq":"CAEZAADaAeNr60A5AADaAeNr60A="}],"user_activity_v1":1.5637434631533e-28,"loc_city":"\u4e0a\u6d77","pass_through":"{\"cold_start\":1,\"user_activity\":3.6487347473576944e-29,\"user_activity_v1\":1.5637434631532972e-28,\"user_stay_time\":0.0,\"first_use_time\":0,\"_new_xm_usr_20210122\":false,\"user_long_all_ctr\":0.0,\"user_long_news_ctr\":0.0,\"user_long_video_ctr\":0.0,\"user_baipai_always_prefer_video\":0,\"user_long_prefer_resource\":-1,\"baipai_user_lastrefresh_clicked\":0}","crudely_stat":"|ri_0"}'
+            from_login: ''
+            from_reg: ''
+            glogid: '3959390624'
+            isLogin: '1'
+            logactid: '1100000004'
+            m: mancard:skeleton_cardItemShow
+            mod: mancard:skeleton
+            picNum: 0,3,6
+            pid: '315'
+            portrait: 330fbbaccfe8bbfa6bb2e7
+            pos: 0,1,2
+            qid: '0xa98b85ed001796b7'
+            query: ''
+            rids: 9053966526370069425,10060275036290053677,9755193089555904547
+            sid: '33816_31253_33693_33849_33675_26350_33810'
+            st: news,news,news
+            stype: 10,10,0
+            submod: card_showLog
+            super_frm: ''
+            superver: supernewplus
+            terminal: PC
+            title: 中美发表应对气候危机联合声明,巴拉圭急需中国疫苗，有人嗅到了“断交”的味道,梦幻西游：抓鬼得到大奖？环装鉴定出无级别特技，玩家39W上架
+            type: '2011'
+            utype: '0'
+            version: PCHome
+        url: https://sp1.baidu.com/-L-Xsjip0QIZ8tyhnq/v.gif
+    validate:
+    -   eq:
+        - status_code
+        - 414
+-   name: /-L-Ysjip0QIZ8tyhnq/v.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            _r: '0.9021115588352924'
+            curcard: '2'
+            curcardtab: ''
+            extra: '{"rec_src":[4400],"type":10,"score":87029.90625,"mark":1,"recall_type":10,"vertical_type":5,"mthid":"1601149438053974","predictor_result":"CAEZAIBDRHtR3EA=","q_ratio":103.49864062721,"recall_attention":[""],"img_num":0,"predictor_extmsg":"EjwZAAAAgItPhD8gBDEAAACAi0+EPzkAAAAgqJLDP6EBAAAAAAAA8D+oAQK1AQAAgD+1AQAAgD+1AQAAgD8iLxkAAADgobGdPyAEMQAAAADl054\/UQAAAADl054\/WQAAAADl054\/cQAAAOChsZ0\/","dnn_score_cp":0.0098153160189069,"th":-1,"gr_layout":"titleonly","session_id":"","refresh_index":"0","session_index":240,"position":0,"log_id":3959390624,"refresh_state":0,"refresh_type":1,"refresh_timestamp_ms":1618726868462,"news_attention":["\u5df4\u9ece\u534f\u5b9a","\u8054\u5408\u56fd","\u80fd\u6e90","\u6c14\u5019\u53d8\u5316","\u65f6\u653f\u5916\u4ea4","\u4e2d\u7f8e","\u4e2d\u7f8e\u5173\u7cfb"],"predictor_q_score":28997.926041484,"is_microvideo":false,"video_type":"","channel_id":1,"wifiinfo":"","gr_step_click":-1,"gr_step_related_click":0,"attentionnum":0,"video_attentionnum":1,"gr_news_sub_category_single":"\u8282\u80fd\u51cf\u6392","ext_multi_score":0,"predictor_result_array":[{"rec_src":4400,"predictorq":"CAEZAIBDRHtR3EA="}],"user_activity_v1":1.5637434631533e-28,"loc_city":"\u4e0a\u6d77","pass_through":"{\"cold_start\":1,\"user_activity\":3.6487347473576944e-29,\"user_activity_v1\":1.5637434631532972e-28,\"user_stay_time\":0.0,\"first_use_time\":0,\"_new_xm_usr_20210122\":false,\"user_long_all_ctr\":0.0,\"user_long_news_ctr\":0.0,\"user_long_video_ctr\":0.0,\"user_baipai_always_prefer_video\":0,\"user_long_prefer_resource\":-1,\"baipai_user_lastrefresh_clicked\":0}","crudely_stat":"|ri_0"},{"rec_src":[4400],"type":10,"score":34717.38671875,"mark":1,"recall_type":10,"vertical_type":0,"mthid":"1551968238585112","predictor_result":"CAEZAACDZgEZykA=","q_ratio":194.44795764506,"recall_attention":[""],"img_num":3,"predictor_extmsg":"EjwZAAAAAO94iT8gBDEAAAAA73iJPzkAAADAtGHUP6EBAAAAAAAA8D+oAQK1AQAAgD+1AQAAgD+1AQAAgD8iLxkAAADAil2LPyAEMQAAAICxyI4\/UQAAAICxyI4\/WQAAAICxyI4\/cQAAAMCKXYs\/","dnn_score_cp":0.017842867524403,"th":-1,"gr_layout":"image1","session_id":"","refresh_index":"0","session_index":240,"position":1,"log_id":3959390624,"refresh_state":0,"refresh_type":1,"refresh_timestamp_ms":1618726868462,"news_attention":["\u80ba\u708e","\u51a0\u72b6\u75c5\u6bd2","\u65b0\u578b\u80ba\u708e","\u65b0\u578b\u51a0\u72b6\u75c5\u6bd2","\u75ab\u60c5"],"predictor_q_score":13362.010940909,"is_microvideo":false,"video_type":"","channel_id":1,"wifiinfo":"","gr_step_click":-1,"gr_step_related_click":0,"attentionnum":0,"video_attentionnum":1,"gr_news_sub_category_single":"\u53f0\u6d77\u65f6\u4e8b","ext_multi_score":0,"predictor_result_array":[{"rec_src":4400,"predictorq":"CAEZAACDZgEZykA="}],"user_activity_v1":1.5637434631533e-28,"loc_city":"\u4e0a\u6d77","pass_through":"{\"cold_start\":1,\"user_activity\":3.6487347473576944e-29,\"user_activity_v1\":1.5637434631532972e-28,\"user_stay_time\":0.0,\"first_use_time\":0,\"_new_xm_usr_20210122\":false,\"user_long_all_ctr\":0.0,\"user_long_news_ctr\":0.0,\"user_long_video_ctr\":0.0,\"user_baipai_always_prefer_video\":0,\"user_long_prefer_resource\":-1,\"baipai_user_lastrefresh_clicked\":0}","crudely_stat":"|ri_0"},{"rec_src":[4205],"type":0,"score":56159.09375,"mark":0,"recall_type":7,"vertical_type":0,"mthid":"1564837137966671","predictor_result":"CAEZAADaAeNr60A5AADaAeNr60A=","q_ratio":1,"recall_attention":["supplement"],"img_num":6,"sample_name":"integration_news","predictor_extmsg":"EhQZAAAAgOLArD8gCTEAAACA4sCsPxoA","dnn_score_cp":0.056159093976021,"th":-1,"gr_layout":"image1","session_id":"","refresh_index":"0","session_index":240,"position":2,"log_id":3959390624,"refresh_state":0,"refresh_type":1,"refresh_timestamp_ms":1618726868462,"news_attention":["\u85cf\u5b9d\u9601","\u5927\u578b\u591a\u4eba\u5728\u7ebf\u89d2\u8272\u626e\u6f14\u6e38\u620f","\u89d2\u8272\u626e\u6f14\u6e38\u620f","\u68a6\u5e7b\u897f\u6e38","\u68a6\u5e7b\u897f\u6e38-->>\u68a6\u5e7b\u897f\u6e38\u6e38\u620f","\u68a6\u5e7b\u897f\u6e38\u6293\u9b3c\u5956\u52b1","\u7f51\u6613\u6e38\u620f","\u7f51\u6e38"],"predictor_q_score":56159.093976021,"is_microvideo":false,"video_type":"","channel_id":1,"wifiinfo":"","gr_step_click":-1,"gr_step_related_click":0,"attentionnum":0,"video_attentionnum":1,"gr_pred_score":0.042719372149756,"gr_dnn_score":0.056159093976021,"gr_calibration_q":0,"gr_pred_dur":0,"gr_news_sub_category_single":"\u7efc\u5408","ext_multi_score":0,"predictor_result_array":[{"rec_src":4205,"predictorq":"CAEZAADaAeNr60A5AADaAeNr60A="}],"user_activity_v1":1.5637434631533e-28,"loc_city":"\u4e0a\u6d77","pass_through":"{\"cold_start\":1,\"user_activity\":3.6487347473576944e-29,\"user_activity_v1\":1.5637434631532972e-28,\"user_stay_time\":0.0,\"first_use_time\":0,\"_new_xm_usr_20210122\":false,\"user_long_all_ctr\":0.0,\"user_long_news_ctr\":0.0,\"user_long_video_ctr\":0.0,\"user_baipai_always_prefer_video\":0,\"user_long_prefer_resource\":-1,\"baipai_user_lastrefresh_clicked\":0}","crudely_stat":"|ri_0"}'
+            from_login: ''
+            from_reg: ''
+            glogid: '3959390624'
+            isLogin: '1'
+            logactid: '1100000004'
+            m: mancard:skeleton_cardItemShow
+            mod: mancard:skeleton
+            picNum: 0,3,6
+            pid: '315'
+            portrait: 330fbbaccfe8bbfa6bb2e7
+            pos: 0,1,2
+            qid: '0xa98b85ed001796b7'
+            query: ''
+            rids: 9053966526370069425,10060275036290053677,9755193089555904547
+            sid: '33816_31253_33693_33849_33675_26350_33810'
+            st: news,news,news
+            stype: 10,10,0
+            submod: card_showLog
+            super_frm: ''
+            superver: supernewplus
+            terminal: PC
+            title: 中美发表应对气候危机联合声明,巴拉圭急需中国疫苗，有人嗅到了“断交”的味道,梦幻西游：抓鬼得到大奖？环装鉴定出无级别特技，玩家39W上架
+            type: '2011'
+            utype: '0'
+            version: PCHome
+        url: https://sp2.baidu.com/-L-Ysjip0QIZ8tyhnq/v.gif
+    validate:
+    -   eq:
+        - status_code
+        - 414
+-   name: /v.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            _r: '0.8450879044641915'
+            cst: '1'
+            ct: '2'
+            isLogin: '1'
+            logExtra: '{"rid":"9053966526370069425","extra":"{\"rec_src\":[4400],\"type\":10,\"score\":87029.90625,\"mark\":1,\"recall_type\":10,\"vertical_type\":5,\"mthid\":\"1601149438053974\",\"predictor_result\":\"CAEZAIBDRHtR3EA=\",\"q_ratio\":103.49864062721,\"recall_attention\":[\"\"],\"img_num\":0,\"predictor_extmsg\":\"EjwZAAAAgItPhD8gBDEAAACAi0+EPzkAAAAgqJLDP6EBAAAAAAAA8D+oAQK1AQAAgD+1AQAAgD+1AQAAgD8iLxkAAADgobGdPyAEMQAAAADl054\\/UQAAAADl054\\/WQAAAADl054\\/cQAAAOChsZ0\\/\",\"dnn_score_cp\":0.0098153160189069,\"th\":-1,\"gr_layout\":\"titleonly\",\"session_id\":\"\",\"refresh_index\":\"0\",\"session_index\":240,\"position\":0,\"log_id\":3959390624,\"refresh_state\":0,\"refresh_type\":1,\"refresh_timestamp_ms\":1618726868462,\"news_attention\":[\"\\u5df4\\u9ece\\u534f\\u5b9a\",\"\\u8054\\u5408\\u56fd\",\"\\u80fd\\u6e90\",\"\\u6c14\\u5019\\u53d8\\u5316\",\"\\u65f6\\u653f\\u5916\\u4ea4\",\"\\u4e2d\\u7f8e\",\"\\u4e2d\\u7f8e\\u5173\\u7cfb\"],\"predictor_q_score\":28997.926041484,\"is_microvideo\":false,\"video_type\":\"\",\"channel_id\":1,\"wifiinfo\":\"\",\"gr_step_click\":-1,\"gr_step_related_click\":0,\"attentionnum\":0,\"video_attentionnum\":1,\"gr_news_sub_category_single\":\"\\u8282\\u80fd\\u51cf\\u6392\",\"ext_multi_score\":0,\"predictor_result_array\":[{\"rec_src\":4400,\"predictorq\":\"CAEZAIBDRHtR3EA=\"}],\"user_activity_v1\":1.5637434631533e-28,\"loc_city\":\"\\u4e0a\\u6d77\",\"pass_through\":\"{\\\"cold_start\\\":1,\\\"user_activity\\\":3.6487347473576944e-29,\\\"user_activity_v1\\\":1.5637434631532972e-28,\\\"user_stay_time\\\":0.0,\\\"first_use_time\\\":0,\\\"_new_xm_usr_20210122\\\":false,\\\"user_long_all_ctr\\\":0.0,\\\"user_long_news_ctr\\\":0.0,\\\"user_long_video_ctr\\\":0.0,\\\"user_baipai_always_prefer_video\\\":0,\\\"user_long_prefer_resource\\\":-1,\\\"baipai_user_lastrefresh_clicked\\\":0}\",\"crudely_stat\":\"|ri_0\"}","flow":2,"stype":"10","picNum":"0","title":"中美发表应对气候危机联合声明","pos":"0","st":"news"},{"rid":"10060275036290053677","extra":"{\"rec_src\":[4400],\"type\":10,\"score\":34717.38671875,\"mark\":1,\"recall_type\":10,\"vertical_type\":0,\"mthid\":\"1551968238585112\",\"predictor_result\":\"CAEZAACDZgEZykA=\",\"q_ratio\":194.44795764506,\"recall_attention\":[\"\"],\"img_num\":3,\"predictor_extmsg\":\"EjwZAAAAAO94iT8gBDEAAAAA73iJPzkAAADAtGHUP6EBAAAAAAAA8D+oAQK1AQAAgD+1AQAAgD+1AQAAgD8iLxkAAADAil2LPyAEMQAAAICxyI4\\/UQAAAICxyI4\\/WQAAAICxyI4\\/cQAAAMCKXYs\\/\",\"dnn_score_cp\":0.017842867524403,\"th\":-1,\"gr_layout\":\"image1\",\"session_id\":\"\",\"refresh_index\":\"0\",\"session_index\":240,\"position\":1,\"log_id\":3959390624,\"refresh_state\":0,\"refresh_type\":1,\"refresh_timestamp_ms\":1618726868462,\"news_attention\":[\"\\u80ba\\u708e\",\"\\u51a0\\u72b6\\u75c5\\u6bd2\",\"\\u65b0\\u578b\\u80ba\\u708e\",\"\\u65b0\\u578b\\u51a0\\u72b6\\u75c5\\u6bd2\",\"\\u75ab\\u60c5\"],\"predictor_q_score\":13362.010940909,\"is_microvideo\":false,\"video_type\":\"\",\"channel_id\":1,\"wifiinfo\":\"\",\"gr_step_click\":-1,\"gr_step_related_click\":0,\"attentionnum\":0,\"video_attentionnum\":1,\"gr_news_sub_category_single\":\"\\u53f0\\u6d77\\u65f6\\u4e8b\",\"ext_multi_score\":0,\"predictor_result_array\":[{\"rec_src\":4400,\"predictorq\":\"CAEZAACDZgEZykA=\"}],\"user_activity_v1\":1.5637434631533e-28,\"loc_city\":\"\\u4e0a\\u6d77\",\"pass_through\":\"{\\\"cold_start\\\":1,\\\"user_activity\\\":3.6487347473576944e-29,\\\"user_activity_v1\\\":1.5637434631532972e-28,\\\"user_stay_time\\\":0.0,\\\"first_use_time\\\":0,\\\"_new_xm_usr_20210122\\\":false,\\\"user_long_all_ctr\\\":0.0,\\\"user_long_news_ctr\\\":0.0,\\\"user_long_video_ctr\\\":0.0,\\\"user_baipai_always_prefer_video\\\":0,\\\"user_long_prefer_resource\\\":-1,\\\"baipai_user_lastrefresh_clicked\\\":0}\",\"crudely_stat\":\"|ri_0\"}","flow":2,"stype":"10","picNum":"3","title":"巴拉圭急需中国疫苗，有人嗅到了“断交”的味道","pos":"1","st":"news"},{"rid":"9755193089555904547","extra":"{\"rec_src\":[4205],\"type\":0,\"score\":56159.09375,\"mark\":0,\"recall_type\":7,\"vertical_type\":0,\"mthid\":\"1564837137966671\",\"predictor_result\":\"CAEZAADaAeNr60A5AADaAeNr60A=\",\"q_ratio\":1,\"recall_attention\":[\"supplement\"],\"img_num\":6,\"sample_name\":\"integration_news\",\"predictor_extmsg\":\"EhQZAAAAgOLArD8gCTEAAACA4sCsPxoA\",\"dnn_score_cp\":0.056159093976021,\"th\":-1,\"gr_layout\":\"image1\",\"session_id\":\"\",\"refresh_index\":\"0\",\"session_index\":240,\"position\":2,\"log_id\":3959390624,\"refresh_state\":0,\"refresh_type\":1,\"refresh_timestamp_ms\":1618726868462,\"news_attention\":[\"\\u85cf\\u5b9d\\u9601\",\"\\u5927\\u578b\\u591a\\u4eba\\u5728\\u7ebf\\u89d2\\u8272\\u626e\\u6f14\\u6e38\\u620f\",\"\\u89d2\\u8272\\u626e\\u6f14\\u6e38\\u620f\",\"\\u68a6\\u5e7b\\u897f\\u6e38\",\"\\u68a6\\u5e7b\\u897f\\u6e38-->>\\u68a6\\u5e7b\\u897f\\u6e38\\u6e38\\u620f\",\"\\u68a6\\u5e7b\\u897f\\u6e38\\u6293\\u9b3c\\u5956\\u52b1\",\"\\u7f51\\u6613\\u6e38\\u620f\",\"\\u7f51\\u6e38\"],\"predictor_q_score\":56159.093976021,\"is_microvideo\":false,\"video_type\":\"\",\"channel_id\":1,\"wifiinfo\":\"\",\"gr_step_click\":-1,\"gr_step_related_click\":0,\"attentionnum\":0,\"video_attentionnum\":1,\"gr_pred_score\":0.042719372149756,\"gr_dnn_score\":0.056159093976021,\"gr_calibration_q\":0,\"gr_pred_dur\":0,\"gr_news_sub_category_single\":\"\\u7efc\\u5408\",\"ext_multi_score\":0,\"predictor_result_array\":[{\"rec_src\":4205,\"predictorq\":\"CAEZAADaAeNr60A5AADaAeNr60A=\"}],\"user_activity_v1\":1.5637434631533e-28,\"loc_city\":\"\\u4e0a\\u6d77\",\"pass_through\":\"{\\\"cold_start\\\":1,\\\"user_activity\\\":3.6487347473576944e-29,\\\"user_activity_v1\\\":1.5637434631532972e-28,\\\"user_stay_time\\\":0.0,\\\"first_use_time\\\":0,\\\"_new_xm_usr_20210122\\\":false,\\\"user_long_all_ctr\\\":0.0,\\\"user_long_news_ctr\\\":0.0,\\\"user_long_video_ctr\\\":0.0,\\\"user_baipai_always_prefer_video\\\":0,\\\"user_long_prefer_resource\\\":-1,\\\"baipai_user_lastrefresh_clicked\\\":0}\",\"crudely_stat\":\"|ri_0\"}","flow":2,"stype":"0","picNum":"6","title":"梦幻西游：抓鬼得到大奖？环装鉴定出无级别特技，玩家39W上架","pos":"2","st":"news"}'
+            logFrom: feed_index
+            logInfo: item
+            logid: '3959390624'
+            qid: '0xa98b85ed001796b7'
+            r: l1618726870361
+            sid: '33816_31253_33693_33849_33675_26350_33810'
+            ssid: 330fbbaccfe8bbfa6bb2e7
+            tid: '27'
+        url: https://hpd.baidu.com/v.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json; charset=utf-8
+    -   eq:
+        - content.error
+        - '0'
+-   name: /-L-Wsjip0QIZ8tyhnq/v.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: same-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        method: GET
+        params:
+            _r: '0.7613433030865437'
+            curcard: '2'
+            curcardtab: ''
+            from_login: ''
+            from_reg: ''
+            glogid: '3959390624'
+            isLogin: '1'
+            logactid: '1100000000'
+            m: mancard:skeleton_modShow
+            mod: mancard:skeleton
+            opType: refresh
+            pid: '315'
+            portrait: 330fbbaccfe8bbfa6bb2e7
+            qid: '0xa98b85ed001796b7'
+            query: ''
+            showTab: '2'
+            sid: '33816_31253_33693_33849_33675_26350_33810'
+            submod: presenter
+            super_frm: ''
+            superver: supernewplus
+            terminal: PC
+            type: '2011'
+            utype: '0'
+            version: PCHome
+        url: https://sp0.baidu.com/-L-Wsjip0QIZ8tyhnq/v.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif

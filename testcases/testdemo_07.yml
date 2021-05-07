@@ -1,0 +1,15 @@
+#output参数 （过时 == export替换）
+- config:
+    name: '验证能否打开newdream主页'
+    base_url: 'http://www.hnxmxit.com'
+    export:
+      - code
+- test:
+    name: 'exec hnxmxit api'
+    request:
+      url: '/'
+      method: 'GET'
+    extract:
+      - code: "status_code"  # 200
+    validate:
+      - eq: ["status_code",200]

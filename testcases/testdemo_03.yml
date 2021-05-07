@@ -1,0 +1,21 @@
+#模拟请求头
+- config:
+    name: "百度搜索关键字测试"
+    base_url: "https://www.baidu.com"
+    export:   #把变量值显示在控制台
+      - title
+- test:
+    name: "执行百度搜索接口"
+    request:
+      method: "GET"
+      url: "/s"
+      headers:
+        User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36"
+        Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+      params:
+        wd: "newdraem"
+    extract:
+      - title: <title>(.+?)<title>
+    validate:
+      - eq: ["status_code",200]
+
