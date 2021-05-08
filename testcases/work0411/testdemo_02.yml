@@ -1,13 +1,18 @@
 - config:
     name: "获取token --删除标签"
+    export:
+      - errcode
 
 - test:
     name: "获取token"
-    api:
-      method: "GET"
+    api: api/begin_dev/get_access_token_api.yml
+    extract:
+      - token: content.access_token
 
 - test:
     name: "删除标签"
-    api:
+    api: api/user_manager/user_tag_manager/delete_tag_info_api.yml
     extract:
-      - errcode: content
+      - errcode: content.errcode
+    validate:
+      - eq: ["status_code",200]

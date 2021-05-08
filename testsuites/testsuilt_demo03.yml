@@ -3,4 +3,4 @@ config:
 
 testcases:
   - name: "删除标签用例"
-    testcase: testcases/work0411/test
+    testcase: testcases/work0411/testdemo_02.yml

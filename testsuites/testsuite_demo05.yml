@@ -1,0 +1,9 @@
+#参数华方式1
+config:
+  name: "百度搜索参数化"
+
+testcases:
+  - name: "百度搜索case"
+    testcase: "testcases/0414/test_baidu_search02.yml"
+    parameters:
+      baidu_search_word: ["xinwen","taobao","12306"]

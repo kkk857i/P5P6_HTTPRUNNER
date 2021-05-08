@@ -1,9 +1,0 @@
-#参数华方式1
-config:
-  name: "百度搜索参数化"
-
-testcases:
-  -name: "百度搜索case"
-   testcase: "testcase/0414/test_baidu_search.yml"
-   varibles:
-     baidu_search_word: "12306"

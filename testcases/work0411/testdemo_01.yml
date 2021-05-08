@@ -1,18 +1,18 @@
 - config:
     name: "百度请求"
-    base_url: "https：//www.baidu.com"
-
+    base_url: "https://www.baidu.com"
+    export:
+      - code
+      - info
+      - title
 - test:
     name: "执行百度首页请求"
     request:
       method: "GET"
       url: "/"
-      - code
-      - info
-      - title
     extract:
       - code: "status_code"
       - info: "reason"
       - title: "<title>(.+?)<title>"
     validate:
-    - eq: [$code,200]
+      - eq: [$code,200]

@@ -1,0 +1,13 @@
+- config:
+    name: "验证百度搜索"
+    export:
+     - title
+
+- test:
+    name: "调用百度搜索接口"
+    api: "api/other_api/baidu_search_api.yml"
+    extract:
+      - title: "<title>(.+?)</title>"
+    validate:
+      - eq: ["status_code",200]
+

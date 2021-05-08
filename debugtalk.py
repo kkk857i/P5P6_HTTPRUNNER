@@ -25,10 +25,11 @@ def get_conditions():
 #     print("测试用例[%s]执行结束"%content)
 
 #参数化
-def get_params():
-    return ['newdream','火车票','汽车票']
-def git_params():
-    pass
+def get_params_01():
+    return ['newdream', '火车票', '汽车票']
+
+def get_params_02():
+    return [["tiantian", "tiantian_百度搜索"], ["12306", "12306_百度搜索"]]
 
 if __name__=='__main__':
     print(get_value())
